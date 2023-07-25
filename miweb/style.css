@@ -1,0 +1,37 @@
+html {
+    background-color: #efece2;
+}
+
+.registrarse {
+    text-align: right;
+    
+}
+
+.navegador {
+    color: #e3e3d1;
+    font-size: 25px;
+    height: 50px;
+    text-align: center;
+    background-color: #4b5757;
+    border-radius: 3px;
+    
+ }
+
+.logoEmpresa {
+    
+}
+
+body h1 {
+    text-align: center;
+}
+
+.carrito {
+    
+}
+
+.footer {
+    height: 30px;
+    text-align: center;
+    color: #e3e3d1;
+    background-color: #4b5757;
+}
