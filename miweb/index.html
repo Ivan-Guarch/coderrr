@@ -6,7 +6,7 @@
      </head>
 
     <body>
-        <h1>2da Pre Entrega</h1>
+        <h1>3er Pre Entrega</h1>
 
         <p class="registrarse">Iniciar Sesión</p>
         <p class="registrarse">Registrate</p>
@@ -20,17 +20,44 @@
             <p>Navegador</p>
         </nav>
 
-        <main>
-            <h2>Productos</h2>
-            <p>Articulo 1</p>
-            <p>Articulo 2</p>
-            
-            <div>
-                <img src="#" alt="">
-                <p>###</p>
-                <p>###</p>
-            </div>
-        </main>
+                 <!-- Formulario Creacion Productos -->
+            <h2>Añadir Productos</h2>
+
+        <form id="formularioCreacionProductos" class="formulario">
+
+            <fieldset>
+
+                <legend>Formulario Para Añadir Productos</legend>
+                <div class="contenedor-campos">
+                     <div class="campos">
+                        <label>Nombre</label>
+                        <input id="nombreProductoDom" class="input-text" type="text" placeholder="Nombre Producto">
+                    </div>
+
+
+                     <div class="campos">
+                        <label>Precio</label>
+                        <input id="precioProductoDom" class="input-text" type="number" placeholder="Precio Producto">
+                    </div>
+
+                     <div class="campos">
+                        <label>Clase</label>
+                        <input id="claseProductoDom" class="input-text" type="text" placeholder="Clase Producto">
+                    </div>
+
+                     <div class="campos">
+                        <label>Cantidad</label>
+                        <input id="cantidadProductoDom" class="input-text" type="number" placeholder="Cantidad Disponible">
+                    </div>
+                </div> <!-- .contenedor-campos -->
+
+                <div class="alinear-derecha flex">
+                    <input id="botonCreacionUsuario" class="boton wd-100" type="submit" value="Añadir">
+                </div>
+            </fieldset>
+        </form>
+
+        <br><br><br>
 
         <footer class="footer">Derechos Reservados 2023</footer>
 

@@ -1,3 +1,4 @@
+/*
 class producto {
     constructor(nombre, precio, clase, cantidad) {
         this.nombre = nombre;
@@ -19,7 +20,7 @@ class producto {
 }
 var arrayProductos = [];
 do {
-    var comprobacion = prompt("Ingresar un nombre al producto o Fin para finalizar");
+    var comprobacion = prompt("Ingrese un nombre de Producto o Fin")
     if (comprobacion === "fin" || comprobacion === "Fin" || comprobacion === "FIN") {
         break;
     } else {
@@ -77,7 +78,7 @@ class lineaCarrito {
 var arrayProductosCarrito = []
 do {
     var nombreProducto = prompt("Ingrese el articulo que desea o Fin para Finalizar");
-    console.log(nombreProducto.toLowerCase)
+    console.log(nombreProducto.toLowerCase())
     if (nombreProducto === "fin" ) {
         break;
     }
@@ -110,3 +111,66 @@ for (lineaCarrito of arrayProductosCarrito) {
 }
 
 document.write("<h2>Precio Total a Pagar: " + precioTotal + " </h2>");
+
+
+*/
+
+// TERCERA PRE ENTREGA!!
+class producto {
+    constructor(nombre, precio, clase, cantidad) {
+        this.nombre = nombre;
+        this.precio = parseFloat(precio);
+        this.clase = clase;
+        this.cantidad = cantidad;
+        this.disponible = true;
+    }
+
+
+
+    sumarIva() {
+        return this.precio * 1.21;
+    }
+
+    vender() {
+        this.disponible = false;
+    }
+}
+
+
+
+const arrayProductos = [];
+const formulario = document.querySelector("#formularioCreacionProductos")
+
+
+/* Creacion Evento Formulario */
+formulario.addEventListener("submit", validarFormularioCreacion )
+
+function validarFormularioCreacion(event) {
+    event.preventDefault();
+    let nombre = document.querySelector("#nombreProductoDom").value
+    let precio = document.querySelector("#precioProductoDom").value
+    let cantidad = document.querySelector("#cantidadProductoDom").value
+    let clase = document.querySelector("#claseProductoDom").value
+    arrayProductos.push(new producto(nombre, precio, clase, cantidad))
+  }
+  console.log(arrayProductos)
+  // Guardando arrayProductos en localStorage
+  const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor)};
+  guardarLocal("listaProductos", JSON.stringify(arrayProductos));
+
+  //Mostrando en Pantalla la Lista de Productos con DOM
+for (producto of arrayProductos) {
+    document.write("<ul><li><h2>Lista Productos Disponibles: <h2></li>");
+    console.log(producto.nombre)
+    document.write("<li><h3>Producto: " + producto.nombre + " <h3></li>");
+    document.write("<li><h2>Cantidad: " + producto.cantidad + " <h2></li>");
+    document.write("<li><h2>Precio: " + producto.precio + " <h2></li>");
+}
+
+
+
+ 
+
+
+
+
